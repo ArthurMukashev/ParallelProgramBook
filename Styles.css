@@ -1,0 +1,19 @@
+ h1 {text-decoration: line-through;}
+            .green-text {color: green;
+                        font-family: "Arial";}
+            .red-text{color: #FF0000;}
+            #uniqieItem{
+                padding: 20px; 
+                margin: 40px;
+                background-color: blue;
+                color:white;
+            width: 200px;
+            height: 400px;
+            background: url("https://pixel.nymag.com/imgs/daily/vulture/2017/02/07/07-john-wick-2-2.w700.h700.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            }
+            
+            .with-image{
+                background: url("https://pixel.nymag.com/imgs/daily/vulture/2017/02/07/07-john-wick-2-2.w700.h700.jpg");
+            }
