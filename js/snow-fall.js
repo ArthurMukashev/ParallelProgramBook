@@ -1,4 +1,4 @@
-var snowmax=350
+var snowmax=0
 
 // Set the colors for the snow. Add as many colors as you like
 var snowcolor=new Array("#ff0000","#b9dff5","#b9dff5","#b9dff5","#b9dff5")
@@ -7,7 +7,7 @@ var snowcolor=new Array("#ff0000","#b9dff5","#b9dff5","#b9dff5","#b9dff5")
 var snowtype=new Array("Times")
 
 // Set the letter that creates your snowflake (recommended: * )
-var snowletter='<img src="elephant.png">'
+var snowletter='<img src="images/elephant.png">'
 
 // Set the speed of sinking (recommended values range from 0.3 to 2)
 var sinkspeed=1.5
