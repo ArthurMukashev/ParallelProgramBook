@@ -1,298 +1,915 @@
-<html>
-    <head>
-        <title>HI!</title>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-grid.css">
-        <link rel="stylesheet" href="css/bootstrap-reboot.css">
-            <link rel="stylesheet" href="css/album.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" src="js/snow-fall.js"></script>
-        <meta charset="utf-8">
-        <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+<!DOCTYPE html>
+  <head>
+    <title>Интерактивный учебник</title>
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <!-- 
+    Polygon Template
+    https://templatemo.com/tm-400-polygon
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo_misc.css">
+    <link href="css/templatemo_style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
+      
+    <script src="js/jquery-1.10.2.min.js"></script> 
+	<script src="js/jquery.lightbox.js"></script>
+	<script src="js/templatemo_custom.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/test.js"></script>
+    <script>
+    function showhide()
+    {
+    	var div = document.getElementById("newpost");
+		if (div.style.display !== "none")
+		{
+			div.style.display = "none";
+		}
+		else {
+			div.style.display = "block";
+		}
+    }
+  	</script>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+<script>
+    function init(){
+        Swal.mixin({
+            confirmButtonText: "Понятно",
+            showCancelButton: true,
+            progressSteps:[1,2,3],
+            cancelButtonText: "Я знаю, как пользоваться учебником"
+        }).queue([
+            {
+                title:"Приветствие",
+                text:"Добро пожаловать в учебник по параллельному программированию!"
+            },
+            {
+                title:"Навигация",
+                text:"Для навигации по вопросам нажмите на интересующий вопрос."
+            },
+            {
+                title:"Возврат на главную",
+                text:"Для того чтобы вернутся на страницу выбора вопроса нажмите на логотип."
+            }
+        ]).then((result)=>{
+        if (result.value){
+            Swal.fire({
+                title: "Приятного пользования!",
+                confirmButtonText: "Спасибо!"
+            })
         }
-      }
-    </style>
-    
-    </head>
-    <body>
-         <header>
-  <div class="collapse bg-dark" id="navbarHeader">
+        })
+        //Swal.fire("Добро пожаловать в учебник по параллельному программированию!");
+        //Swal.fire("Для навигации по вопросам нажмите на интересующий вопрос.");
+        //Swal.fire("Для того чтобы вернутся на страницу выбора вопроса нажмите на логотип.");
+
+    }
+</script>
+    <script>
+        function showm(){
+            Swal.fire("+79867972125")
+        }
+        
+        function showk(){
+            Swal.fire("+79096066132")
+        }
+        function showi(){
+            Swal.fire("+79083205070")
+        }
+        function shown() {
+            Swal.fire("+79878783869")
+        }
+        function showa(){
+            Swal.fire("+79325512487")
+        }
+        function showl(){
+            Swal.fire("+79328548556")
+        }
+        function shows() {
+            Swal.fire("+79328432840")
+        }
+        function showkam() {
+            Swal.fire("+79*********")
+        }
+    </script>
+  </head>
+  <body>
+  	<div class="site-header">
+		<div class="main-navigation">
+			<div class="responsive_menu">
+				<ul>
+					<li><a class="show-1 templatemo_home" href="#">Список тем</a></li>
+					<li><a class="show-2 templatemo_page2" href="#">Наша команда</a></li>
+					<li><a class="show-5 templatemo_page5" href="#">Связь</a></li>
+                    <li><a onclick="init()">Как пользоваться?</a></li>
+          <li><a onclick="test()">Пройти тест</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row templatemo_gallerygap">
+					<div class="col-md-12 responsive-menu">
+						<a href="#" class="menu-toggle-btn">
+				            <i class="fa fa-bars"></i>
+				        </a>
+					</div> <!-- /.col-md-12 -->
+                    <div class="col-md-3 col-sm-12">
+                    	<a href="index.html"><img src="images/templatemo_logo.png" alt="Polygon HTML5 Template"></a>
+                    </div>
+					<div class="col-md-9 main_menu">
+						<ul>
+							<li><a class="show-1 templatemo_home" href="#">
+                            	<span class="fa fa-camera"></span>
+                                Список тем</a></li>
+							<li><a class="show-2 templatemo_page2" href="#">
+                            	<span class="fa fa-users"></span>
+                          		  Наша команда</a></li>
+							<li><a class="show-5 templatemo_page5" href="#">
+                            	<span class="fa fa-envelope"></span>
+                                Контакты</a></li>
+                            <li><a onclick="init()"><span class="fa fa-question-circle"></span>Как пользоваться?</a></li>
+                            <li><a onclick="test()"><span class="fa fa-bars"></span>Пройти тест</a></li>
+						</ul>
+					</div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.main-navigation -->
+	</div> <!-- /.site-header -->
+    <div id="menu-container">
+    <!-- gallery start -->
+    <div class="content homepage" id="menu-1">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+	    <div class="row templatemorow">
+    		<div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/1.jpg);">
+             	 	<div class="overlay">
+                        <a href="1.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Album</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/2.jpg);">
+              	<div class="overlay">
+                    <a href="2.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
-</header>
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Album example</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
+    <div class="hex col-sm-6  templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/3.jpg);">
+              	<div class="overlay">
+						<a href="3.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/4.jpg);">
+              	<div class="overlay">
+						<a href="4.html" class="fa fa-expand"></a>
+					</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/5.jpg);">
+              		<div class="overlay">
+						<a href="5.html" class="fa fa-expand"></a>
+					</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
+    </div>
+  	     <div class="hex col-sm-6 hex-offset templatemo-hex-top1 templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/6.jpg);">
+              		<div class="overlay">
+						<a href="6.html" class="fa fa-expand"></a>
+					</div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
+    </div>
+     <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/7.jpg);">
+              		<div class="overlay">
+						<a href="7.html" class="fa fa-expand"></a>
+					</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
+    </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top3">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/8.jpg);">
+              		<div class="overlay">
+						<a href="8.html" class="fa fa-expand"></a>
+					</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-        <div class="row">
-        <div class="col-md-4 col-sm-12">
-            <div class="alert alert-success" role="alert">
-                     Хорошо!
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top2">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/9.jpg);">
+              		<div class="overlay">
+						<a href="9.html" class="fa fa-expand"></a>
+					</div>
+              </div>
             </div>
-            <h1>Все нормально!<span class="badge badge-secondary">Работаем</span></h1>
-            <span class="badge badge-primary">Primary</span>
-<span class="badge badge-secondary">Secondary</span>
-<button type="button" class="btn btn-warning">Warning</button>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/priroda1.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="images/priroda2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="images/lisa.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+      </div>
+    	</div>
+	</div>
+    <div  id="newpost" style="display:none;" class="container answer_list templatemo_gallerytop">
+	    <div class="row templatemorow">
+    		<div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/10.jpg);">
+             	 	<div class="overlay">
+						<a href="10.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
-            <div class="col-md-4 col-sm-12">
-            
-            <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/11.jpg);">
+              	<div class="overlay">
+						<a href="11.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
+    <div class="hex col-sm-6  templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/12.jpg);">
+              	<div class="overlay">
+						<a href="12.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
         </div>
-        
     </div>
-        
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/13.jpg);">
+              	<div class="overlay">
+						<a href="13.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
-    
-</main>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/14.jpg);">
+              		<div class="overlay">
+						<a href="14.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  	     <div class="hex col-sm-6 hex-offset templatemo-hex-top1 templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
 
-<footer class="text-muted">
-  <div class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.3/getting-started/introduction/">getting started guide</a>.</p>
-  </div>
-</footer>
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        
-    </body>
+            </div>
+          </div>
+        </div>
+    </div>
+     <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/16.jpg);">
+              		<div class="overlay">
+						<a href="15.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top3">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/17.jpg);">
+              		<div class="overlay">
+						<a href="16.html" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top2">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    	</div>
+	</div>
+    <div class="container">
+    	<div class="row">
+        	<div class="templatemo_loadmore">
+			 <button class="gallery_more" id="button" onClick="showhide()">Показать больше</button>
+            </div>
+        </div>
+    </div>
+    </div>
+      <!-- gallery end -->
+    <!-- team start -->
+    <div class="content team" id="menu-2">
+     <div class="templatemo_ourteam">
+     		<div class="container templatemo_hexteam">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/1.jpg);">
+                                <div class="overlay templatemo_overlay1">
+
+                                	<a href="https://vk.com/id184839942" >
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-vk"></span>
+                                 	  </div>
+                                    </a>
+
+                                    <a href="mailto: masha.akishina.97@mail.ru">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-google-plus"></span>
+                                    </div>
+                                    </a>
+
+                                    <a onclick="showm()">
+                                        <div class="smallhexagon">
+                                            <span class="fa fa-twitter"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt" >
+                    	<h2>Акишина Мария Николаевна</h2>
+                        <p>
+                            Студентка физико-математического факультета группы ОБ-МО-41. Обладает высоким уровнем знаний в областях математики, информатики, физики, а также в гуманитарных науках.
+                        </p>
+                    </div>
+                    <div class="templatemo_servicecol2">
+                    <div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/2.jpg);">
+                                <div class="overlay templatemo_overlay1">
+                                	<a href="https://vk.com/epmack">
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-vk"></span>
+                                 	  </div>
+                                    </a>
+                                    <a href="https://vk.com/write92926159">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-google-plus"></span>
+                                    </div>
+                                    </a>
+                                    <a onclick="showk()">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-twitter"></span>
+                                    </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt">
+                    	<h2>Алексеев Константин Алексеевич</h2>
+                        <p>Студент физико-математического факультета группы ОБ-МО-41. На каждую проблему имеет свое собственное, непохожее на другие, решение. К тому же занимает активную позицию в планировании, адаптации и внедрении ресурсов и проектов.</p>
+                    </div>
+                    </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="container templatemo_hexteam s_top">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/3.jpg);">
+                                <div class="overlay templatemo_overlay1">
+                                	<a href="https://vk.com/ilua.ivanov">
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-vk"></span>
+                                 	  </div>
+                                    </a>
+                                    <a href="https://vk.com/write154644171">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-google-plus"></span>
+                                    </div>
+                                    </a>
+                                    <a onclick="showi()">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-twitter"></span>
+                                    </div>
+                                    </a>
+                                    </a>
+                                </div>
+                                
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt" >
+                    	<h2>Иванов Илья Сергеевич</h2>
+                        <p>Студент физико-математического факультета группы ОБ-МО-41. Обладает высоким уровнем знаний в большинстве областях современной науки: математика, информатика, физика, программирование и т.д.</p>
+                    </div>
+                    <div class="templatemo_servicecol2">
+                    <div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/4.jpg);">
+                                <div class="overlay templatemo_overlay1">
+                                	<a href="https://vk.com/id317126234">
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-vk"></span>
+                                 	  </div>
+                                    </a>
+                                    <a href="mailto: kit1919@mail.ru">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-google-plus"></span>
+                                    </div>
+                                    </a>
+                                    <a onclick="shown()">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-twitter"></span>
+                                    </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt">
+                    	<h2>Каверин Никита Валерьевич</h2>
+                        <p>Студент физико-математического факультета группы ОБ-МО-41. Отличается усердием и волей к победе. Является ценным сотрудником и хорошим собеседником.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+     </div>
+     <!--</div>-->
+        <br><br><br><br><br><br><br><br>
+       <!-- <div class="content team" id="menu-3"> -->
+            <div class="templatemo_ourteam">
+                <div class="container templatemo_hexteam">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="hexagon hexagonteam gallery-item">
+                                <div class="hexagon-in1">
+                                    <div class="hexagon-in2" style="background-image: url(images/team/5.jpg);">
+                                        <div class="overlay templatemo_overlay1">
+                                            <a href="https://vk.com/art_m_m">
+                                                <div class="smallhexagon">
+                                                    <span class="fa fa-vk"></span>
+                                                </div>
+                                            </a>
+
+                                            <a href="mailto: arthur.mukasev@gmail.com">
+                                                <div class="smallhexagon">
+                                                    <span class="fa fa-google-plus"></span>
+                                                </div>
+                                            </a>
+
+                                            <a onclick="showa()">
+                                                <div class="smallhexagon">
+                                                    <span class="fa fa-twitter"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-8 templatemo_servicetxt" >
+                            <h2>Мукашев Артур Алтынбекович</h2>
+                            <p>Студент физико-математического факультета, староста группы ОБ-МО-41. Разработчик приложения. Имеет высокий уровень развития как в научном плане, так и в творческом.</p>
+                        </div>
+                        <div class="templatemo_servicecol2">
+                            <div class="col-md-3 col-sm-4">
+                                <div class="hexagon hexagonteam gallery-item">
+                                    <div class="hexagon-in1">
+                                        <div class="hexagon-in2" style="background-image: url(images/team/6.jpg);">
+                                            <div class="overlay templatemo_overlay1">
+                                                <a href="https://vk.com/lexa.vk98">
+                                                    <div class="smallhexagon">
+                                                        <span class="fa fa-vk"></span>
+                                                    </div>
+                                                </a>
+                                                <a href="https://vk.com/write136969427">
+                                                    <div class="smallhexagon">
+                                                        <span class="fa fa-google-plus"></span>
+                                                    </div>
+                                                </a>
+                                                <a onclick="showl()">
+                                                    <div class="smallhexagon">
+                                                        <span class="fa fa-twitter"></span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="clear"></div>
+                                            <div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-8 templatemo_servicetxt">
+                                <h2>Мурзаков Алексей Эдуартович</h2>
+                                <p>Студент физико-математического факультета группы ОБ-МО-41. Активно занимается спортом, осуществляет педагогическую деятельность, связанную с обучением футболу детей.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="container templatemo_hexteam s_top">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="hexagon hexagonteam gallery-item">
+                                <div class="hexagon-in1">
+                                    <div class="hexagon-in2" style="background-image: url(images/team/7.jpg);">
+                                        <div class="overlay templatemo_overlay1">
+                                            <a href="https://vk.com/sorokin_evgeny99">
+                                                <div class="smallhexagon">
+                                                    <span class="fa fa-vk"></span>
+                                                </div>
+                                            </a>
+                                            <a href="https://vk.com/write288300038">
+                                                <div class="smallhexagon">
+                                                    <span class="fa fa-google-plus"></span>
+                                                </div>
+                                            </a>
+                                            <a onclick="shows()">
+                                                <div class="smallhexagon">
+                                                    <span class="fa fa-twitter"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                        <div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-8 templatemo_servicetxt" >
+                            <h2>Сорокин Евгений Сергеевич</h2>
+                            <p>Студент физико-математического факультета группы ОБ-МО-41. На первый взгляд кажется незаурядным программистом. На самом деле - опытный разработчик, владеющий технологиями Битрикс и SEO.</p>
+                        </div>
+                        <div class="templatemo_servicecol2">
+                            <div class="col-md-3 col-sm-4">
+                                <div class="hexagon hexagonteam gallery-item">
+                                    <div class="hexagon-in1">
+                                        <div class="hexagon-in2" style="background-image: url(images/team/8.jpg);">
+                                            <div class="overlay templatemo_overlay1">
+                                                <a href="https://vk.com/nipponka_s">
+                                                    <div class="smallhexagon">
+                                                        <span class="fa fa-vk"></span>
+                                                    </div>
+                                                </a>
+                                                <a href="mailto: shovalieva@gmail.com">
+                                                    <div class="smallhexagon">
+                                                        <span class="fa fa-google-plus"></span>
+                                                    </div>
+                                                </a>
+                                                <a onclick="showkam()">
+                                                    <div class="smallhexagon">
+                                                        <span class="fa fa-twitter"></span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="clear"></div>
+                                            <div class="overlay templatemo_overlaytxt">Контактные данные</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-8 templatemo_servicetxt">
+                                <h2>Шовалиева Камилла Фарходовна</h2>
+                                <p>Студентка физико-математического факультета. Медийная личность, блоггерша. Помощник по дизайну проектов и приложений, а также PR-менеджер группы.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--team end-->
+    <div class="clear"></div>
+    <!-- service start -->
+    <div class="content services" id="menu-3">
+    <div class="container">
+    	<div class="row templatemo_servicerow">
+        	<div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-bell"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>  
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3></h3>
+                    <p></p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-briefcase"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>  
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3></h3>
+                    <p></p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-mobile"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>  
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3></h3>
+                    <p></p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-trophy"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>  
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3></h3>
+                    <p></p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-thumb-tack"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>  
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3></h3>
+                    <p></p>
+                    </div>
+              </div>
+              
+        </div>
+    </div>
+    </div>
+    <!-- service end -->
+    <!-- contact start -->
+    <div class="content contact" id="menu-5">
+    <div class="container">
+     	<div class="row">
+        	<div class="col-md-4 col-sm-12">
+            	<div class="templatemo_contactmap">
+                    <iframe width="330" height="380" src="https://maps.google.com/maps?width=500&amp;height=200&amp;hl=en&amp;q=Orenburg%2C%20Russia%2C%20%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD%D0%B0%201+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 leftalign">
+            	<div class="templatemo_contacttitle">Контактная информация</div>
+                <div class="clear"></div>
+                <p></p>
+                <div class="templatemo_address">
+                	<ul>
+                	<li class="left fa fa-map-marker"></li>
+                    <li class="right">Оренбургская область, г. Оренбург <br>пр. Гагарина, 1</li>
+                    <li class="clear"></li>
+                    <li class="left fa fa-phone"></li>
+                    <li class="right">8 (353) 277-70-85</li>
+                    <li class="clear"></li>
+                    <li class="left fa fa-envelope"></li>
+                    <li class="right">ospu@ospu.ru                	<a href="mailto:arthur.mukasev@gmail.com" class="right">Отправить сообщение</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+
+
+            </div>
+        </div>
+    	
+    </div>
+    </div>
+    </div>
+    <!-- contact end -->
+	<!-- footer start -->
+    <div class="templatemo_footer">
+    	<div class="container">
+    	<div class="row">
+        	<div class="col-md-9 col-sm-12">
+            	<span>MukashevCorp &copy; 2019 OSPU | MOAIS</span>
+            </div>
+            <div class="col-md-3 col-sm-12 templatemo_rfooter">
+            	  <a href="https://vk.com/art_m_m">
+                 	<div class="hex_footer">
+					<span class="fa fa-facebook"></span>
+					</div>
+                  </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- footer end -->    
+	<script>
+	$('.gallery_more').click(function(){
+		var $this = $(this);
+		$this.toggleClass('gallery_more');
+		if($this.hasClass('gallery_more')){
+			$this.text('Показать больше');
+		} else {
+			$this.text('Показать меньше');
+		}
+	});
+    </script>
+	<!-- templatemo 400 polygon -->
+  </body>
 </html>

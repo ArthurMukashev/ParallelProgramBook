@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+  <head>
+    <title>Интерактивный учебник</title>
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <!-- 
+    Polygon Template
+    https://templatemo.com/tm-400-polygon
+    -->
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10, user-scalable=yes">
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo_misc.css">
+    <link href="css/templatemo_style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
+      
+    <script src="js/jquery-1.10.2.min.js"></script> 
+	<script src="js/jquery.lightbox.js"></script>
+	<script src="js/templatemo_custom.js"></script>
+    <script>
+    function showhide()
+    {
+    	var div = document.getElementById("newpost");
+		if (div.style.display !== "none")
+		{
+			div.style.display = "none";
+		}
+		else {
+			div.style.display = "block";
+		}
+    }
+  	</script>
+  </head>
+  <body>
+  	<div class="site-header">
+		<div class="main-navigation">
+			<div class="responsive_menu">
+				<ul>
+					<li><a href="index.html">На главную</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row templatemo_gallerygap">
+					<div class="col-md-12 responsive-menu">
+						<a href="#" class="menu-toggle-btn">
+				            <i class="fa fa-bars"></i>
+				        </a>
+					</div> <!-- /.col-md-12 -->
+                    <div class="col-md-3 col-sm-12">
+                    	<a href="index.html"><img src="images/templatemo_logo.png" alt="Polygon HTML5 Template"></a>
+                    </div>
+					<div class="col-md-9 main_menu">
+						<ul>
+							<li><a href="index.html">
+                            	<span class="fa fa-book"></span>
+                                На главную</a></li>
+						</ul>
+					</div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.main-navigation -->
+	</div> <!-- /.site-header -->
+    <div id="menu-container">
+    <!-- gallery start -->
+     <div class="container">
+		 <h2>2. Основные парадигмы параллельного программирования.</h2>
+		 <a class="fa fa-book" href="https://pro-prof.com/forums/topic/parallel-programming-paradigms"> Источник 1</a>
+		 |
+		 <a class="fa fa-book" href="http://www2.sscc.ru/Links/Litera/hpc/g1.2.html"> Источник 2</a>
+		 |
+		 <a class="fa fa-book" href="https://www.opennet.ru/docs/RUS/linux_parallel/node221.html"> Источник 3</a>
+		 <p>
+			 Параллельные вычисления, используемые в областях, таких как РУМ, могут сводиться к вычислениям согласно трем фундаментальным точкам зрения в зависимости от способа организации вычислительных задач. С каждой точки зрения допускается различные стратегии распределения рабочей нагрузки (они будут рассмотрены позже, в этом разделе). Первая и наиболее общая модель дл приложений  PVM может быть определена как «беспорядочные» вычисления: группа тесно связанных процессов, в типичных случаях реализующих один код и производящих вычисления над различными порциями всех данных, что обычно приводит к периодическим обменам промежуточными результатами. Эта парадигма может, при желании, быть разделена на категории:
+		 </p>
+		 <p>
+			 <b>Модель "ведущий-ведомый" (или "хост-станция")</b>, в которой выделяется “контролирующая” программа, называемая ведущей, и ответственная за порождение процессов, инициализацию, сбор и отображение результатов, и возможно распределение времени для функций. Ведомые программы при необходимости выполняют непосредственные вычисления; распределение их рабочей нагрузки выполняется либо ведущей программой (статически или динамически), либо ими самими.
+		 </p>
+		 <p>
+			 <b>Модель "только станции"</b>, в которой возможно множество путей выполнения одной программы, причем один процесс (обычно он инициируется вручную) берет на себя не вычислительную ответственность в дополнение к собственно вычислениям. Вторая модель поддерживается в PVM под названием ``дерево'' вычислений. Согласно такому сценарию, процессы порождаются (обычно динамически по ходу вычислительного процесса) древовидным способом - таким образом, устанавливая отношения ``предки-потомки'' в форме, похожей на дерево (в противовес беспорядочным вычислениям, при которых возникают звездообразные отношения). Эта парадигма, несмотря на то, что менее часто используема, является более естественно подходящей для приложений, когда общая вычислительная нагрузка ``априори'' неизвестна, например, при реализации алгоритмов ``ветвей и границ'', ``альфа-бета поиска'' и рекурсивных алгоритмов ``разделяй и властвуй''.
+		 </p>
+		 <p>
+			 <b>Третью модель, которая определяется как "гибридная"</b>, можно представить в виде комбинации древовидной модели и модели беспорядочных вычислений. По существу, эта парадигма предполагает наличие структур, арбитрирующих процессы порождения: это значит, что в любой точке при выполнении приложения структура, контролирующая отношения процессов, может изменить стратегию арбиртража и тем самым граф.
+		 </p>
+     </div>
+      <!-- gallery end -->
+
+
+	<!-- footer start -->
+    <div class="templatemo_footer">
+    	<div class="container">
+    	<div class="row">
+        	<div class="col-md-9 col-sm-12">
+            	<span>MukashevCorp &copy; 2019 OSPU | MOAIS</span>
+            </div>
+            <div class="col-md-3 col-sm-12 templatemo_rfooter">
+            	  <a href="https://vk.com/art_m_m">
+                 	<div class="hex_footer">
+					<span class="fa fa-facebook"></span>
+					</div>
+                  </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- footer end -->    
+	<script>
+	$('.gallery_more').click(function(){
+		var $this = $(this);
+		$this.toggleClass('gallery_more');
+		if($this.hasClass('gallery_more')){
+			$this.text('Показать больше');
+		} else {
+			$this.text('Показать меньше');
+		}
+	});
+    </script>
+	<!-- templatemo 400 polygon -->
+  </body>
+</html>

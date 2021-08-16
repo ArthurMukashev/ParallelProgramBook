@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+  <head>
+    <title>Интерактивный учебник</title>
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <!-- 
+    Polygon Template
+    https://templatemo.com/tm-400-polygon
+    -->
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10, user-scalable=yes">
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo_misc.css">
+    <link href="css/templatemo_style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
+      
+    <script src="js/jquery-1.10.2.min.js"></script> 
+	<script src="js/jquery.lightbox.js"></script>
+	<script src="js/templatemo_custom.js"></script>
+    <script>
+    function showhide()
+    {
+    	var div = document.getElementById("newpost");
+		if (div.style.display !== "none")
+		{
+			div.style.display = "none";
+		}
+		else {
+			div.style.display = "block";
+		}
+    }
+  	</script>
+  </head>
+  <body>
+  	<div class="site-header">
+		<div class="main-navigation">
+			<div class="responsive_menu">
+				<ul>
+					<li><a href="index.html">На главную</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row templatemo_gallerygap">
+					<div class="col-md-12 responsive-menu">
+						<a href="#" class="menu-toggle-btn">
+				            <i class="fa fa-bars"></i>
+				        </a>
+					</div> <!-- /.col-md-12 -->
+                    <div class="col-md-3 col-sm-12">
+                    	<a href="index.html"><img src="images/templatemo_logo.png" alt="Polygon HTML5 Template"></a>
+                    </div>
+					<div class="col-md-9 main_menu">
+						<ul>
+							<li><a href="index.html">
+                            	<span class="fa fa-book"></span>
+                                На главную</a></li>
+						</ul>
+					</div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.main-navigation -->
+	</div> <!-- /.site-header -->
+    <div id="menu-container">
+    <!-- gallery start -->
+     <div class="container">
+		 <h2>6. Реализация критических секций в Win32. Мьютексы.</h2>
+		 <a class="fa fa-book" href="https://ru.wikipedia.org/wiki/%D0%9C%D1%8C%D1%8E%D1%82%D0%B5%D0%BA%D1%81"> Источник 1</a>
+		 |
+		 <a class="fa fa-book" href="http://www.codenet.ru/progr/cpp/process-threads-sync.php"> Источник 2</a>
+		 |
+		 <a class="fa fa-book" href="http://src-code.net/kriticheskie-sekcii/"> Источник 3</a>
+
+		 <p>Мьютекс (англ. mutex, отангл. mutual exclusion— «взаимное исключение») — является аналогом одноместного семафора, в программировании необходим для сопоставления синхронно выполняющихся потоков. Мью́текс представляет собой концепцию программирования, которая используется для решения вопросов много поточности. Мьютекс отличается от семафора тем, что допускает только один поток в контролируемом участке, заставляя другие потоки, которые пытаются получить доступ к этому разделу ждать, пока первый поток не вышел из этого раздела.</p>
+		 <p>Принимает два значенения:</p>
+		 <ul>
+			 <li>открыт - поток может войти в свою критическую секцию;</li>
+			 <li>закрыт - поток не может войти в критическую секцию.</li>
+		 </ul>
+		 <p>Задача мьютекса— защита объекта от доступа к нему других потоков, отличных от того, который завладел мьютексом. В каждый конкретный момент только один поток может владеть объектом, защищённым мьютексом. Если другому потоку будет нужен доступ к переменной, защищённой мьютексом, то этот поток засыпает до тех пор, пока мьютекс не будет освобождён.</p>
+		 <p>Цель использования мьютексов —  защита данных от повреждения в результате асинхронных изменений (состояние гонки), однако могут порождаться другие проблемы— такие, как взаимная блокировка (клинч). Для описания мьютекса требуется всего один бит, хотя чаще используется целая переменная, у которой 0 означает не блокированное состояние, а все остальные значения соответствуют блокированному состоянию. Значение мьютекса устанавливается двумя процедурами. Если поток собирается войти в критическую область, он вызывает процедуру mutex_lock. Если мьютекс не заблокирован, запрос выполняется и вызывающий поток может попасть в критическую область. Если mutex закрыт,  то поток пытающийся войти в критическую секцию блокируется.</p>
+		 <p>Последний стандарт языка Си (ISO/IEC 9899:2011) определяет тип mtx_t и функции для работы с ним, которые должны быть доступны, если макрос __STDC_NO_THREADS__ не был определён компилятором. Семантика и свойства мьютексов в целом совпадают со стандартом POSIX:</p>
+		 <ul>
+			 <li><b>mtx_plain</b> — нет контроля повторного захвата тем же потоком;</li>
+			 <li><b>mtx_recursive</b> — повторные захваты тем же потоком допустимы, ведётся счётчик таких захватов;</li>
+			 <li><b>mtx_timed</b> — поддерживается захват мьютекса с тайм-аутом (следует отметить, что, в отличие от стандарта POSIX, поддержка этого свойства мьютекса не является опциональной).</li>
+		 </ul>
+		 <p>Возможность использования мьютексов в разделяемой памяти различных процессов в стандарте Си++ не рассматривается.</p>
+	 </div>
+      <!-- gallery end -->
+
+
+	<!-- footer start -->
+    <div class="templatemo_footer">
+    	<div class="container">
+    	<div class="row">
+        	<div class="col-md-9 col-sm-12">
+            	<span>MukashevCorp &copy; 2019 OSPU | MOAIS</span>
+            </div>
+            <div class="col-md-3 col-sm-12 templatemo_rfooter">
+            	  <a href="https://vk.com/art_m_m">
+                 	<div class="hex_footer">
+					<span class="fa fa-facebook"></span>
+					</div>
+                  </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- footer end -->    
+	<script>
+	$('.gallery_more').click(function(){
+		var $this = $(this);
+		$this.toggleClass('gallery_more');
+		if($this.hasClass('gallery_more')){
+			$this.text('Показать больше');
+		} else {
+			$this.text('Показать меньше');
+		}
+	});
+    </script>
+	<!-- templatemo 400 polygon -->
+  </body>
+</html>
